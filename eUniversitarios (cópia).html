@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU 2026</title>
+</head>
+<body>
+    <h1>Inscrições para os Encontros Universitários 2026</h1>
+    <form action="/eu2026.html">
+        <label for="tituloTrabalho">Título do Trabalho:</label><br>
+        <input type="text" name="tituloTrabalho" id="tituloTrabalho" required="true" placeholder="Insira o título do trabalho" maxlength="100">
+        
+        <br><br>
+
+        <label for="resumo">Resumo do Trabalho:</label><br>
+        <textarea name="resumo" id="resumo" required="true" maxlength="500"></textarea>
+
+        <br><br>
+
+        <label for="trilha">Trilha de submissão:</label><br>
+        <input type="checkbox" name="trilha" id="pesquisa" value="pesquisa cientifica">
+        <label for="pesquisa">Pesquisa Científica</label><br>
+        <input type="checkbox" name="trilha" id="inovacao" value="inovacao e tecnologia">
+        <label for="inovacao">Inovação e Tecnologia</label><br>
+        <input type="checkbox" name="trilha" id="extensao" value="extensao">
+        <label for="extensao">Extensão Universitária</label><br>
+        <input type="checkbox" name="trilha" id="empreendedorismo" value="empreendedorismo">
+        <label for="empreendedorismo">Empreendedorismo</label><br>
+        <input type="checkbox" name="trilha" id="arte" value="arte">
+        <label for="arte">Arte</label><br>
+        <input type="checkbox" name="trilha" id="cultura" value="cultura">
+        <label for="cultura">Cultura</label><br>
+
+        <br>
+
+        <label for="autores">Autores:</label><br>
+        <input type="text" id="autores" name="autores" required="true" maxlength="200">
+
+        <br><br>
+
+        <label for="orientador">Orientador:</label><br>
+        <select name="orientador" id="orientador">
+            <option value="">-- Selecione --</option>
+            <option value="cleiton">Cleiton</option>
+            <option value="sidartha">Sidartha</option>
+            <option value="victor">Victor</option>
+        </select>
+
+        <br><br>
+
+        <label for="anexo">Documentos complementares:</label><br>
+        <input type="url" id="anexo" name="anexo">
+
+        <br><br>
+
+        <label for="comentarios">Comentários adicionais:</label><br>
+        <textarea name="comentarios" id="comentarios" maxlength="300"></textarea>
+
+        <br><br>
+        
+        <button type="submit" id="enviar">Enviar</button>
+        <button type="reset" id="limpar">Limpar</button>
+    </form>
+
+</body>
+</html>
