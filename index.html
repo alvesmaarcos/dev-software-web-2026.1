@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+</head>
+<body>
+    <header>
+        <h1>Hello, World!</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobremim">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1 id="sobremim">Marcos Alves</h1>
+            <p>Olá! Sou graduando em Engenharia de Software pela Universidade Federal do Ceará. Estou testando as tags do HTML 5 para construir páginas web modernas e funcionais.</p>
+            <label for="graduacao">Porcentagem de conclusão da graduação</label><br>
+            <progress id="graduacao" value="50" max="100"></progress><br>
+            50% Engenheiro de Software
+        </article>
+        <aside>
+            <h4>Interesses profissionais</h4>
+            <p>Tenho interesse por <mark>P&D na área de Ciência de Dados</mark>.</p>
+        </aside>
+        <article>
+            <h2 id="formacao">Formação</h2>
+            <p>Experiências profissionais</p>
+            <details>
+                <summary>Bolsista de Iniciação à Docência na UFC</summary>
+                <p>Estou atualmente atuando como bolsista PID na UFC, como monitor da disciplina de Fundamentos de Bancos de Dados.</p>
+            </details>
+            <details>
+                <summary>Estagiário na Fundação Demócrito Rocha</summary>
+                <p>tuei como tutor do curso Aprendendo a Programar com Games e IA, iniciativa da Fundação no projeto Fábrica de Programadores.</p>
+            </details>
+            <details>
+                <summary>Estagiário no Centro Universitário Vale do Salgado</summary>
+                <p>Atuei como Técnico em Informática no Departamento de Tecnologia e Informação (DTI) da instituição.</p>
+            </details>
+        </article>
+        <article>
+            <h2 id="contato">Contato</h2>
+            <ul>
+                <li><a href="github.com/alvesmaarcos">GitHub</a></li>
+                <li><a href="linkedin.com/in/alvesmaarcos">LinkedIn</a></li>
+            </ul>
+        </article>
+        <article id="calculo">
+            <p>Me ajude a calcular quantos anos faltam para minha colação de grau!</p>
+            <section>
+                <form oninput="document.getElementById('result').value=parseInt(b.value) - parseInt(a.value)">
+                    <label for="a">Em qual ano estou</label>
+                    <input type="number" id="a" name="a" value="2024"><br>
+                    <label for="b">Quando me formarei</label>
+                    <input type="number" id="b" name="b" value="2027">
+
+                    <p>Faltam <output id="result" for="a b">0</output> ano(s) para o fim da minha graduação</p>
+                </form>
+            </section>
+        </article>
+    </main>
+    <hr>
+    <footer>
+        <p>Disciplina de Desenvolvimento de Software para Web</p>
+        <p>Universidade Federal do Ceará - Campus Quixadá</p>
+        <aside>
+            <figure>
+                <img src="logoufc.png" alt="Assinatura Horizontal da Universidade Federal do Ceará" width="20%">
+                <figcaption>Assinatura Horizontal da Universidade Federal do Ceará</figcaption>
+            </figure>
+        </aside>
+    </footer>
+</body>
+</html>
