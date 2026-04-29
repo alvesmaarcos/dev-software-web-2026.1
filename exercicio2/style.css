@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgray;
+}
+.barra-fixa {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 5000;
+}
+
+.container {
+    background-color: white;
+    position: relative;
+    padding: 25px;
+    margin: 20%;
+    border-style: dashed;
+    border-color: rgb(0, 0, 0);
+    border-radius: 5%;
+}
+
+.foto-de-perfil {
+    position: relative;
+}
+
+.pfp {
+    display: flex;
+    justify-self: center;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 100%;
+}
+.notificacoes-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    border-color: rgb(0, 26, 255);
+    background-color: rgb(255, 2, 2);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.titulo-perfil {
+    display: flex;
+    justify-self: center;
+}
+
+.scrollbar {
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.titulo-scrollbar {
+    background-color: rgb(255, 139, 139);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+}
+

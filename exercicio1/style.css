@@ -1,0 +1,97 @@
+.displays {
+    background-color: rgba(0, 255, 170, 0.349);
+}
+
+.zindex {
+    background-color: bisque;
+}
+
+.links {
+    background-color: antiquewhite;
+}
+
+.inline {
+    background-color: azure;
+}
+
+.in {
+    background-color: rgb(255, 204, 174);
+    display: inline
+}
+
+.block {
+    background-color: azure;
+}
+
+.blck {
+    background-color: rgb(255, 204, 174);
+    display: block;
+}
+
+.inline-block {
+    background-color: azure;
+}
+
+.in-block {
+    background-color: rgb(255, 204, 174);
+    display: inline-block
+}
+
+.z {
+  width: 150px;
+  border: 10px solid rgb(0, 0, 0);
+  padding: 50px;
+  margin: 20px;
+}
+
+#z1 {
+  width: 30px;
+  border: 15px solid rgb(255, 0, 0);
+  padding: 25px;
+  margin: 20px;
+  position: absolute;
+  top: 450px;
+  left: 100px;
+  z-index: 1;
+}
+
+#z2 {
+  width: 30px;
+  border: 15px solid rgb(255, 228, 72);
+  padding: 25px;
+  margin: 20px;
+  position: relative;
+  top: 60px;
+}
+
+#z3 {
+  width: 30px;
+  border: 15px solid green;
+  padding: 25px;
+  margin: 20px;
+  position: absolute;
+  top: 455px;
+  left: 80px;
+  z-index: 2;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+}
+
+a:link {
+  color: red;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: rgb(112, 255, 99);
+}
+
+a:active {
+  color: blue;
+}
