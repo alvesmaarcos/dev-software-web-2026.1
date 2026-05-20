@@ -1,0 +1,59 @@
+<script>
+    class Animal {
+        constructor(nome, tutor) {
+           this.nome = nome;
+           this.tutor = tutor; 
+        }
+
+        EmitirSom() {
+            console.log(`${this.nome} emite som.`);
+        }
+        Comer(){
+            console.log(`${this.nome} come.`);
+        }
+
+        
+        getNome(){
+            return this.nome;
+        }
+        getTutor(){
+            return this.tutor;
+        }
+        
+        setNome(novoNome){
+            this.nome = novoNome;
+        }
+        setTutor(novoTutor){
+            this.tutor = novoTutor;
+        }
+    }
+
+    class Cachorro extends Animal {
+        EmitirSom(){
+            console.log('Au au');
+        }
+    }
+    class Gato extends Animal {
+        EmitirSom(){
+            console.log('Miau.');
+        }
+    }
+    class Pato extends Animal {
+        EmitirSom(){
+            console.log('Quack');
+        }
+    }
+
+    const cachorro = new Cachorro("Rex", "Marcos");
+    cachorro.EmitirSom();
+    cachorro.Comer();
+
+    const gato = new Gato("Maya", "Marcos");
+    gato.EmitirSom();
+    gato.Comer();
+
+    const pato = new Pato("Cleiton", "Marcos");
+    pato.EmitirSom();
+    pato.Comer();
+
+</script>

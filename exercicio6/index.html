@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .black-friday-theme {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="ativarBlackFriday()">Ativar Modo Black Friday</button>
+    <br><br>
+
+    <img id="banner-principal" src="banner-normal.png" alt="Promoções">
+    
+    <div class="produto-card">Smartphone</div>
+    <div class="produto-card">Notebook</div>
+    <div class="produto-card">Fone Bluetooth</div>
+    
+    <p id="cupom-secreto" style="display: none">CUPOM: JSBLACK20</p>
+
+    <script>
+        function ativarBlackFriday() {
+            const banner = document.getElementById('banner-principal');
+            banner.setAttribute('src', 'banner-black-friday.jpg');
+
+            const produtos = document.querySelectorAll('.produto-card');
+            produtos.forEach(produto => {
+                produto.classList.add('black-friday-theme');
+            });
+
+            const cupom = document.getElementById('cupom-secreto');
+            console.log(cupom.textContent);
+        }
+    </script>
+</body>
+</html>

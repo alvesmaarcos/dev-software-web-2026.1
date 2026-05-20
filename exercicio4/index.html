@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra</title>
+</head>
+<body>
+    <form id="formCheckout">
+    <label for="produtos">Produto:</label>
+    <select id="produtos" name="produtos"></select>
+    
+    <br><br>
+
+    <label for="quantidade">Quantidade:</label>
+    <input type="number" id="quantidade" name="quantidade" min="1" value="1">
+    
+    <br><br>
+
+    <button type="button" onclick="executarRecibo()">Finalizar Compra</button>
+</form>
+    <script>
+        const cliente = { 
+            nome: "Ana Silva", 
+            cpf: "111.222.333-44", 
+            cep: "00000-000"
+        };
+        
+        const entrega = { 
+            frete: 15.00, 
+            cep: "63900-000" 
+        };
+        const estoqueLocal = [
+            "Notebook",
+            "Mouse"
+        ];
+
+        const estoqueParceiro = [
+            "Teclado Mecânico", 
+            "Monitor"
+        ];
+
+        const todosProdutos = [ ...estoqueLocal, ...estoqueParceiro ];
+
+        const resumoPedido = { ...cliente, ...entrega };
+
+        const selectProdutos = document.getElementById("produtos");
+
+        todosProdutos.forEach(produto => {
+        
+            const option = document.createElement("option");
+            option.value = produto;
+            option.textContent = produto;
+            selectProdutos.appendChild(option);
+        });
+
+        const gerarRecibo = (resumo, quantidade, produto) => {
+            console.log(`O cliente ${resumo.nome} receberá ${quantidade} item(ns) de ${produto} no CEP ${resumo.cep}`);
+        };
+
+        const executarRecibo = () => {
+            const quantidade = document.getElementById("quantidade").value;
+            const produtoSelecionado = document.getElementById("produtos").value;
+            
+            gerarRecibo(resumoPedido, quantidade, produtoSelecionado);
+        };
+    </script>
+</body>
+</html>

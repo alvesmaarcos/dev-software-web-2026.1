@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <label for="preco">Insira o preço:</label><br>
+    <input type="number" name="preco" id="preco">
+    <br><br>
+    <label for="quantidade">Insira a quantidade:</label><br>
+    <input type="number" name="quantidade" id="quantidade">
+    <br><br>
+    <p id="total">Valor total: R$ </p>
+
+
+    <script>
+        const precoInput = document.getElementById("preco");
+        const quantidadeInput = document.getElementById("quantidade");
+        const totalParagrafo = document.getElementById("total");
+
+        function atualizarTotal() {
+            const preco = parseFloat(precoInput.value) || 0;
+            const quantidade = parseFloat(quantidadeInput.value) || 0;
+            const total = preco * quantidade;
+
+            totalParagrafo.textContent = `Valor total: R$ ${total}.`;
+        }
+
+        precoInput.addEventListener("input", atualizarTotal);
+        quantidadeInput.addEventListener("input", atualizarTotal);
+
+    </script>
+</body>
+</html>

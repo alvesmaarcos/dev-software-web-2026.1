@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <ul class="lista-alunos">
+        <li>Anna</li>
+        <li>Davi</li>
+        <li>Enzo</li>
+        <li>Kelton</li>
+        <li>Marcos</li>
+        <li>Murilo</li>
+    </ul>
+
+    <script>
+        const listaAlunos = document.querySelectorAll(".lista-alunos li");
+
+        listaAlunos.forEach((el, i) => {
+            if (i%2 !== 0) {
+                el.style.color = "red";
+            }
+        })
+        
+    </script>
+</body>
+</html>

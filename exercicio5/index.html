@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class ContaCorrente {
+            #saldo;
+
+            constructor(titular, saldoInicial){
+                this.titular = titular;
+                this.#saldo = saldoInicial;
+            }
+
+            getSaldo(){
+                return `R$ ${this.#saldo.toFixed(2)}`;
+            }
+
+            setSaldo(novoSaldo) {
+                if (novoSaldo < 0) {
+                    console.error("Valor negativo. Tente novamente.");
+                    return;
+                }
+
+                this.#saldo = novoSaldo;
+                return true;
+            }  
+        }
+
+        const conta1 = new ContaCorrente("Marcos", 1500.00);
+        console.log(conta1.getSaldo());
+
+        conta1.setSaldo(2000.00);
+        console.log(conta1.getSaldo());
+
+        conta1.setSaldo(-50.00);
+        console.log(conta1.getSaldo());
+
+    </script>
+</body>
+</html>
