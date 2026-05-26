@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="btn-mudanca">Clique no botão abaixo para alterar a cor do plano de fundo</label><br>
+    <button id="btn-mudanca">Clique aqui</button>
+    <script>
+        const botao = document.getElementById("btn-mudanca");
+        const body = document.body
+
+        botao.addEventListener("click", () => {
+            const r = Math.floor(Math.random() * 255);
+            const g = Math.floor(Math.random() * 255);
+            const b = Math.floor(Math.random() * 255);
+
+            const cor = `rgb(${r}, ${g}, ${b})`;
+
+            body.style.backgroundColor = cor;
+        });
+    </script>
+</body>
+</html>

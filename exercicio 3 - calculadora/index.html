@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <input id="numeros" type="text" onchange="calcular()">
+    <p id="resultado"></p>
+</body>
+
+<script>
+    function calcular() {
+        let numerosInput = document.getElementById("numeros").value;
+        
+        let partes = numerosInput.match(/(\d+\.\d+|\d+|[+\-*/])/g);
+
+        if (!partes || partes.length === 0) {
+            document.getElementById("resultado").innerHTML = "";
+            return;
+        }
+
+        let total = parseFloat(partes[0]);
+
+        for (let i = 1; i < partes.length; i += 2) {
+            let operador = partes[i];
+            let proximoValor = parseFloat(partes[i + 1]);
+
+            if (operador === '+') {
+                total += proximoValor;
+            } else if (operador === '-') {
+                total -= proximoValor;
+            } else if (operador === '*') {
+                total *= proximoValor;
+            } else if (operador === '/') {
+                total /= proximoValor;
+            }
+        }
+
+        document.getElementById("resultado").innerHTML = total;
+    }
+</script>
+</html>

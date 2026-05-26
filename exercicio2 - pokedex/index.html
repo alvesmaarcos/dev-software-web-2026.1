@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container-pokemons {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px 10px;
+        }    
+
+        .carta-pokemon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .carta-pokemon p {
+            margin: 0;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Listagem de Pokemóns</h1>
+    <div id="container-pokemons" class="container-pokemons"></div>
+</body>
+
+<script>
+    let numPokemon = 1;
+    let meuHtml = document.getElementsByTagName("HTML")[0];
+    let containerPokemon = document.getElementById("container-pokemons");
+
+
+    meuHtml.addEventListener("click", () => {
+        let linkPokemon = `https://raw.githubusercontent.com/PokeAPI/sprites/3eee52bd999f586cd03683c4fb3a72ee68dee718/sprites/pokemon/${numPokemon}.png`;
+
+        let carta = document.createElement("div");
+        carta.className = "carta-pokemon";
+
+        let novoPokemonImg = document.createElement("img");
+        novoPokemonImg.src = linkPokemon;
+
+        let novoPokemonIndice = document.createElement("p");
+        novoPokemonIndice.innerHTML = `#${numPokemon}`;
+
+        carta.appendChild(novoPokemonImg);
+        carta.appendChild(novoPokemonIndice);
+
+        containerPokemon.appendChild(carta);
+
+        numPokemon++;
+    });
+</script>
+</html>
